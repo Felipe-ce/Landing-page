@@ -42,10 +42,12 @@ img{
   background-color: var(--bg-color);
   width: 100vw;
   height: 100vh;
+}
+.container-desk{
   display: grid;
-  gap: 10px;
+  grid-auto-rows: min-content;
+  gap: 30px;
   align-items: start;
-
 }
 .logo img{
   width: 120px;
@@ -85,4 +87,29 @@ img{
   box-shadow: 0 2px 5px rgba(122, 114, 114, 0.4);
   cursor: pointer;
   outline: 0;
+}
+
+/*
+  versão desktop
+*/
+@media(min-width: 960px){
+    .container{
+      background: url("/images/bg-desktop.svg");
+      background-color: var(--bg-color);
+      margin: 0 auto;
+    }
+    .container-desk{
+      max-width: 960px;
+      margin: 0 auto;
+      grid-template-columns: 1fr 1fr;
+    }
+    .logo{
+      grid-column: span 2;
+    }
+    .mockups{
+      grid-row: span 3;
+    }
+    .titulo, .descricao{
+      text-align: left;
+    }
 }
