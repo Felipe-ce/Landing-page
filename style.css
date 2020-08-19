@@ -99,17 +99,28 @@ img{
       margin: 0 auto;
     }
     .container-desk{
-      max-width: 960px;
+      max-width: 1140px;
       margin: 0 auto;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 2fr 1fr;
+      justify-content: center;
     }
     .logo{
       grid-column: span 2;
     }
     .mockups{
       grid-row: span 3;
+
     }
-    .titulo, .descricao{
+    .titulo{
       text-align: left;
+      margin-top: 60px;
+    }
+    .descricao{
+      text-align: left;
+      margin-top: -60px;
+    }
+    .btn{
+      justify-self: start;
+      margin-top: -45px;
     }
 }
