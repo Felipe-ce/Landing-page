@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap');
+
 :root{
+  --font-titulo: 'Poppins', sans-serif;
+  --font-corpo: 'Open Sans', sans-serif;
+
+
   --bg-color: hsl(257, 40%, 49%)
 }
 
@@ -10,121 +16,68 @@
 a {
 	text-decoration: none;
 }
-
-/**
- * Remove list-style
- */ 
-
-ol, ul {
-	list-style: none;
-}
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6, 
-p, 
-a, 
-ul {
-	font-size: 1em;
-	font-weight: normal;
-}
-
 img{
   max-width: 100%;
 }
-.container{
-  padding: 20px;
-  background: url("/images/bg-mobile.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: var(--bg-color);
-  width: 100vw;
-  height: 100vh;
-}
-.container-desk{
-  display: grid;
-  grid-auto-rows: min-content;
-  gap: 30px;
-  align-items: start;
-}
-.logo img{
-  width: 120px;
-}
-.logo{
-  display: block;
-  padding: 10px 0;
-  max-width: 120px;
-}
 .titulo{
-  font: 400 1.5em Poppins;
-  line-height: 1.5;
-  letter-spacing: .1em;
-  color: #fff;
-  text-align: center;
-  align-self: start;
+  font-family: var(--font-titulo);
+  font-weight: 400;
 }
 .descricao{
-  font: 200 1em Open Sans;
-  color: #fff;
-  text-align: center;
   line-height: 1.5;
-  letter-spacing: .1em;
-  align-self: start;
+  margin-bottom: 12px;
+}
+.btn{
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  padding: 8px;
+  color: var(--bg-color);
+  background-color: #fff;
+  border-radius: 20px;
+}
+.mockups{
+  height: 200px;
 }
 
-.btn{
-  font: 400 1em Poppins;
-  color: var(--bg-color);
-  display: block;
-  padding: 10px 15px;
-  background: #fff;
-  width: 180px;
-  border-radius: 40px;
-  text-align: center;
-  justify-self: center;
-  box-shadow: 0 2px 5px rgba(122, 114, 114, 0.4);
-  cursor: pointer;
-  outline: 0;
-}
-<<<<<<< Updated upstream
 
 /*
-  versão desktop
+Conceito mobile primeiro
 */
-@media(min-width: 960px){
-    .container{
-      background: url("/images/bg-desktop.svg");
-      background-color: var(--bg-color);
-      margin: 0 auto;
-    }
-    .container-desk{
-      max-width: 1140px;
-      margin: 0 auto;
-      grid-template-columns: 2fr 1fr;
-      justify-content: center;
-    }
-    .logo{
-      grid-column: span 2;
-    }
-    .mockups{
-      grid-row: span 3;
-
-    }
-    .titulo{
-      text-align: left;
-      margin-top: 60px;
-    }
-    .descricao{
-      text-align: left;
-      margin-top: -60px;
-    }
-    .btn{
-      justify-self: start;
-      margin-top: -45px;
-    }
+body{
+  font-family: var(--font-corpo);
+  background-image: url(/images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  background-color: var(--bg-color);
 }
-=======
-  
->>>>>>> Stashed changes
+.container{
+  padding: 20px 10px;
+  max-width: 320px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  text-align: center;
+  color: #fff;
+}
+.logo{
+  text-align: left;
+  max-width: 120px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+.redes-sociais{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  padding-top: 40px ;
+}
+.redes-sociais img{
+  width: 18px;
+  height: 18px;
+}
+.redes-sociais a + a{
+  margin-left: 12px;
+}
