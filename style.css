@@ -1,33 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap");
 
-:root{
-  --font-titulo: 'Poppins', sans-serif;
-  --font-corpo: 'Open Sans', sans-serif;
+:root {
+  --font-titulo: "Poppins", sans-serif;
+  --font-corpo: "Open Sans", sans-serif;
 
-
-  --bg-color: hsl(257, 40%, 49%)
+  --bg-color: hsl(257, 40%, 49%);
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 img{
   max-width: 100%;
 }
-.titulo{
+.titulo {
   font-family: var(--font-titulo);
   font-weight: 400;
 }
-.descricao{
+.descricao {
   line-height: 1.5;
   margin-bottom: 12px;
 }
-.btn{
+.btn {
   display: block;
   margin: 0 auto;
   width: 200px;
@@ -36,15 +35,14 @@ img{
   background-color: #fff;
   border-radius: 20px;
 }
-.mockups{
+.mockups img {
   height: 200px;
 }
-
 
 /*
 Conceito mobile primeiro
 */
-body{
+body {
   font-family: var(--font-corpo);
   background-image: url(/images/bg-mobile.svg);
   background-repeat: no-repeat;
@@ -52,7 +50,7 @@ body{
   background-size: contain;
   background-color: var(--bg-color);
 }
-.container{
+.container {
   padding: 20px 10px;
   max-width: 320px;
   margin: 0 auto;
@@ -61,23 +59,68 @@ body{
   text-align: center;
   color: #fff;
 }
-.logo{
-  text-align: left;
+.header img {
   max-width: 120px;
-  padding: 10px 0;
-  margin-bottom: 20px;
+  margin: 20px;
 }
-.redes-sociais{
+
+.redes-sociais {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-content: center;
-  padding-top: 40px ;
+  padding-top: 40px;
 }
-.redes-sociais img{
+.redes-sociais img {
   width: 18px;
   height: 18px;
 }
-.redes-sociais a + a{
+.redes-sociais a + a {
   margin-left: 12px;
+}
+
+@media (min-width: 600px) {
+  body {
+    background-image: url(/images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+  .header {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .header img {
+    max-width: 200px;
+  }
+  .titulo{
+    font-size: 2.5em;
+    font-weight: 700;
+  }
+
+  .container {
+    text-align: left;
+    max-width: 1140px;
+    height: 80vh;
+    grid-template-columns: minmax(300px, 600px) auto;
+    align-content: center;
+    align-items: center;
+  }
+  .mockups {
+    grid-row: span 4;
+  }
+  .mockups img {
+    height: auto;
+  }
+  .btn{
+    text-align: center;
+    margin: 10px 0;
+    padding: 12px;
+    -webkit-box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.45);
+    box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.45);
+  }
+  .redes-sociais{
+    justify-self: end;
+  }
 }
